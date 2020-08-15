@@ -2,16 +2,16 @@ import Conf from 'conf';
 import defaultCommunities from '../communities/defaultCommunities';
 
 const store = new Conf({ defaults: defaultCommunities });
-// const config = new Conf();
-console.log("config.get('stackexchange');", store.get('stackexchange'));
-console.log("config.get('stackexchange.name');", store.get('stackexchange.name'));
-console.log("config.get('stackexchange.url');", store.get('stackexchange.url'));
 
-// deletes but defautls recover on next startup
-console.log("store.delete('stackexchange')", store.delete('stackexchange'));
-console.log("config.get('stackexchange');", store.get('stackexchange'));
+// store.set('stackoverflow.checked', false);
+// console.log('store.path', store.path);
+// console.log('store.path', store.delete('stackoverflow'));
+// console.log('store.store', store.store);
 
-console.log('store.store', store.store);
-console.log('store.path', store.path);
-// SOH TESTEEE *** *** ***
+// Lista ao inves de objeto
+export const defaultComunitiesList = (
+  Object.entries(store.store).map(([key, cmt]) => (cmt))
+);
+console.log('store.clear', store.clear());
+
 export default store;

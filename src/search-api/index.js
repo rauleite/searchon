@@ -13,7 +13,6 @@ const get = (searchParams) => new Promise((resolve, reject) => {
     return reject(new Error('Hasn\'t query parameter'));
   }
 
-  console.log('get -> url', url);
   https.get(url, (res) => {
     res.setEncoding('utf8');
     let body = '';

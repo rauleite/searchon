@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 
-import { defaultComunitiesList } from './defaultCommunities';
+import { defaultComunitiesList } from '../store';
 
 const communities = async () => (
   inquirer.prompt([{
