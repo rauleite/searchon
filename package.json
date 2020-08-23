@@ -1,17 +1,24 @@
 {
   "name": "searchon",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": {
     "name": "Raul Abreu Leite",
     "email": "raul.abreu.leite@gmail.com"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/rauleite/searchon.git"
-  },  
-  "homepage": "https://github.com/rauleite/searchon.git#readme",
+    "type": "git",
+    "url": "https://github.com/rauleite/searchon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rauleite/searchon/issues"
+  },
+  "homepage": "https://github.com/rauleite/searchon#readme",
   "description": "CLI for developer friendly Discussions Search (Mac, Linux, Windows)",
-  "keywords": ["Google", "Search", "CLI"],
+  "keywords": [
+    "Google",
+    "Search",
+    "CLI"
+  ],
   "license": "MIT",
   "main": "./.bin/main.js",
   "bin": {

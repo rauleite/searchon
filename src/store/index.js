@@ -1,17 +1,18 @@
 import Conf from 'conf';
-import defaultCommunities from '../communities/defaultCommunities';
+import defaultSites from '../sites/defaultSites';
+import defaultGroups from '../groups/defaultGroups';
+import configs from '../utils/configs';
+import instructions from './instructions';
 
-const store = new Conf({ defaults: defaultCommunities });
-
-// store.set('stackoverflow.checked', false);
-// console.log('store.path', store.path);
-// console.log('store.path', store.delete('stackoverflow'));
-// console.log('store.store', store.store);
-
-// Lista ao inves de objeto
-export const defaultComunitiesList = (
-  Object.entries(store.store).map(([key, cmt]) => (cmt))
-);
-console.log('store.clear', store.clear());
-
-export default store;
+export const conf = new Conf({
+  defaults: {
+    instructions,
+    configs,
+    groups: defaultGroups,
+    sites: defaultSites,
+  },
+});
+const { store } = conf;
+export const groupsStore = store.groups;
+export const sitesStore = store.sites;
+export const configsStore = store.configs;
