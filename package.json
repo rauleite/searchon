@@ -27,7 +27,7 @@
   "sideEffects": false,
   "scripts": {
     "dev": "yarn build --watch",
-    "pkg": "pkg . --out-path ./download/",
+    "pkg": "pkg . --out-path ../searchon-bin/ && cp -r node_modules/open/xdg-open ../searchon-bin/xdg-open && ls -lha ../searchon-bin/xdg-open",
     "start": "node ./.bin/main.js",
     "build": "cross-env NODE_OPTIONS=--max_old_space_size=2048 webpack --display-optimization-bailout",
     "build:prod": "webpack --config=webpack.prod.js"
