@@ -1,46 +1,25 @@
 /* eslint-disable import/no-extraneous-dependencies */
+const webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const TerserPlugin = require('terser-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 const commonConfig = require('./webpack.common');
 
 module.exports = merge(commonConfig, {
-  // devtool: 'source-map',
-  // devtool: 'cheap-inline-module-source-map',
+  // devtool: 'inline-source-map',
+  // devtool: 'eval-inline-source-map',
+  // devtool: 'eval-cheap-source-map',
+
+  // devtool: 'eval-cheap-module-source-map',
+  // mode: 'development',
   mode: 'production',
-  // externals: {
-  //   // child_process: 'child_process',
-  //   // fs: 'fs',
-  //   // readline: 'readline',
-  // },
+  target: 'node', // in order to ignore built-in modules like path, fs, etc.
   externals: [nodeExternals()], // in order to ignore all modules in node_modules folder
 
   optimization: {
-    // should be included?
-    // optimization: {
-    // usedExports: true,
-    // },
-    // concatenateModules: false,
-
     minimize: true,
-    minimizer: [
-      // new ClosurePlugin({ mode: 'AGGRESSIVE_BUNDLE' }, {
-      // }),
-      new TerserPlugin({
-        test: /\.js(\?.*)?$/i,
-        cache: true,
-        parallel: true,
-
-        // sourceMap: true,
-        // exclude: /node_modules/,
-        terserOptions: {
-          ecma: 2020,
-
-        },
-      }),
-    ],
   },
   plugins: [
+    new webpack.BannerPlugin({ banner: '#!/usr/bin/env node', raw: true }),
   ],
 });

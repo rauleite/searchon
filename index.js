@@ -1,4 +1,3 @@
-// #!/usr/bin/env node
 import open from 'open';
 import { program } from 'commander';
 import prompt from './src/prompt';

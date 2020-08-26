@@ -30,7 +30,7 @@ export const configureOptions = () => {
       // Only one argument
       if (oneArg) {
         exitWithError(`There must be only one search term. Try to surround it with quotes: "${terms} ${oneArg}"`);
-        return;
+        // return;
       }
       if (terms) {
         setProgramTerms(terms);
