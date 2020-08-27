@@ -20,13 +20,13 @@ Have you ever noticed how annoying it is to tweak Google tech search results? Th
 
 `searchon`
 
-![Simple Wizard](https://raw.githubusercontent.com/rauleite/searchon/master/assets/simple.gif)
+![Simple Wizard](https://raw.githubusercontent.com/rauleite/assets/master/simple.gif)
 
 ### With Options
 
-![With group option](https://raw.githubusercontent.com/rauleite/searchon/master/assets/group.gif)
+![With group option](https://raw.githubusercontent.com/rauleite/assets/master/group.gif)
 
-![With group and term option](https://raw.githubusercontent.com/rauleite/searchon/master/assets/group_and_term.gif)
+![With group and term option](https://raw.githubusercontent.com/rauleite/assets/master/group_and_term.gif)
 
 ### Cache
 
@@ -38,7 +38,7 @@ Edit your site and groups preferences in a settings file:
 
 `searchon --edit-cache`
 
-![Store editing](https://raw.githubusercontent.com/rauleite/searchon/master/assets/cache.gif)
+![Store editing](https://raw.githubusercontent.com/rauleite/assets/master/cache.gif)
 
 OR
 
