@@ -1,6 +1,6 @@
 {
   "name": "searchon",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": {
     "name": "Raul Abreu Leite",
     "email": "raul.abreu.leite@gmail.com"
@@ -30,7 +30,8 @@
     "pkg": "pkg . --out-path ../searchon-bin/ && cp -r node_modules/open/xdg-open ../searchon-bin/xdg-open && ls -lha ../searchon-bin/xdg-open",
     "start": "node ./.bin/main.js",
     "build": "cross-env NODE_OPTIONS=--max_old_space_size=2048 webpack --display-optimization-bailout",
-    "build:prod": "webpack --config=webpack.prod.js"
+    "build:prod": "webpack --config=webpack.prod.js",
+    "up": "yarn upgrade-interactive"
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",

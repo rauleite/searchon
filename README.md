@@ -6,19 +6,19 @@ Have you ever noticed how annoying it is to tweak Google tech search results? Th
 
 ## Instalation
 
-`yarn global add searchon`
-
-OR
-
 `npm install --global searchon`
+
+### Binaries for envirounments without Nodejs
+
+[linux](https://github.com/rauleite/searchon/releases/download/v1.0.0.0/searchon-linux)
+[macos](https://github.com/rauleite/searchon/releases/download/v1.0.0.0/searchon-macos)
+[win](https://github.com/rauleite/searchon/releases/download/v1.0.0.0/searchon-win.exe)
 
 ## Usage
 
 ### Interactive mode
 
-```bash
-searchon
-```
+`searchon`
 
 ![Simple Wizard](https://github.com/rauleite/searchon/blob/master/assets/simple.gif)
 
@@ -36,23 +36,17 @@ All your options have been saved, to speed up next searches.
 
 Edit your site and groups preferences in a settings file:
 
-```bash
- searchon --edit-cache
-```
+`searchon --edit-cache`
 
 ![Store editing](https://github.com/rauleite/searchon/blob/master/assets/cache.gif)
 
 OR
 
-```bash
-searchon --cache-path
-```
+`searchon --cache-path`
 
 ### Help
 
-```bash
-searchon -h
-```
+`searchon --help`
 
 ```bash
 Usage: searchon [--options param1[,param2]] ["search terms"]
@@ -73,7 +67,7 @@ Search wizard:
   $ searchon
 Search based on the multiple groups:
   $ searchon -g myGroup,otherGroup "deno vs nodejs"
-Tip: If you know what you're doing, you can create groups and sites by editing the cache file. (Warning: risk of corrupting it)
+Tip: If you know what you re doing, you can create groups and sites by editing the cache file. (Warning: risk of corrupting it)
   $ searchon --cache-path
   $ searchon --edit-cache
 ```
