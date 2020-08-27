@@ -7,7 +7,7 @@ module.exports = {
   output: {
     // filename: '[name].[contenthash].js',
     filename: 'main.js',
-    path: path.resolve(__dirname, '.bin'),
+    path: path.resolve(__dirname, 'bin'),
   },
   plugins: [
     new CleanWebpackPlugin(),

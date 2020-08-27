@@ -1,6 +1,6 @@
 {
   "name": "searchon",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "author": {
     "name": "Raul Abreu Leite",
     "email": "raul.abreu.leite@gmail.com"
@@ -20,9 +20,9 @@
     "CLI"
   ],
   "license": "MIT",
-  "main": "./.bin/main.js",
+  "main": "./bin/main.js",
   "bin": {
-    "searchon": "./.bin/main.js"
+    "searchon": "./bin/main.js"
   },
   "sideEffects": false,
   "scripts": {
@@ -33,6 +33,7 @@
     "build:prod": "webpack --config=webpack.prod.js"
   },
   "dependencies": {
+    "@babel/runtime": "^7.11.2",
     "commander": "^6.0.0",
     "conf": "^7.1.2",
     "inquirer": "^7.3.3",
